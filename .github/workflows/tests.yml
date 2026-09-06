@@ -23,11 +23,26 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
 
-      - name: Install dependencies
+      # torch и torchvision ставятся одной командой из CPU-индекса: собранные
+      # порознь, они дают несовместимые бинарники и падают на регистрации
+      # операторов (torchvision::nms does not exist)
+      - name: Install PyTorch (CPU)
         run: |
           python -m pip install --upgrade pip
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install -r requirements-dev.txt
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      # ловит рассинхрон сборок понятной строкой, а не падением на сборе тестов
+      - name: Verify torch/torchvision pairing
+        run: |
+          python -c "
+          import torch, torchvision
+          print('torch', torch.__version__, '| torchvision', torchvision.__version__)
+          torchvision.ops.nms(torch.zeros(0, 4), torch.zeros(0), 0.5)
+          print('binaries are compatible')
+          "
 
       - name: Lint
         run: ruff check src scripts tests
