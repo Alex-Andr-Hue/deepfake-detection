@@ -1,0 +1,40 @@
+# данные и артефакты обучения
+data/
+checkpoints/
+*.pth
+*.pt
+*.onnx
+
+# результаты прогонов: csv и submission не коммитим, графики — коммитим
+results/*.csv
+results/*.json
+results/submission*
+
+# ноутбуки коммитятся без выводов: картинки лежат в results/figures/ отдельными файлами
+
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# тесты и линтеры
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# jupyter
+.ipynb_checkpoints/
+
+# окружение и IDE
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

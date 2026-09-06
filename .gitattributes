@@ -1,0 +1,10 @@
+# нормализуем переводы строк в репозитории
+* text=auto eol=lf
+
+# бинарные артефакты не трогать
+*.png binary
+*.jpg binary
+*.pth binary
+
+# ноутбуки считать текстом, но не показывать в diff по умолчанию
+*.ipynb text linguist-language=Python
