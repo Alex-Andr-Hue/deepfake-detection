@@ -5,9 +5,11 @@ checkpoints/
 *.pt
 *.onnx
 
-# результаты прогонов: csv и submission не коммитим, графики — коммитим
+# сводные результаты публикуем; прочие csv/json и submission не коммитим
 results/*.csv
 results/*.json
+!results/model_comparison.csv
+!results/model_comparison.json
 results/submission*
 
 # ноутбуки коммитятся без выводов: картинки лежат в results/figures/ отдельными файлами

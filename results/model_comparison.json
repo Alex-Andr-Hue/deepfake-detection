@@ -1,0 +1,67 @@
+{
+  "UNet": {
+    "name": "UNet",
+    "accuracy": 0.9892,
+    "precision": 0.9772,
+    "recall": 0.9589,
+    "f1": 0.968,
+    "roc_auc": 0.9985,
+    "threshold": 0.2193,
+    "dataset": "clean",
+    "epochs": 50,
+    "parameters": 1927042,
+    "note": "очищенные данные"
+  },
+  "ResNet50": {
+    "name": "ResNet50",
+    "accuracy": 0.986,
+    "precision": 0.9722,
+    "recall": 0.9448,
+    "f1": 0.9583,
+    "roc_auc": 0.9977,
+    "threshold": 0.2144,
+    "dataset": "clean",
+    "epochs": 50,
+    "parameters": 23512130,
+    "note": "очищенные данные"
+  },
+  "ResNet18": {
+    "name": "ResNet18",
+    "accuracy": 0.9856,
+    "precision": 0.9815,
+    "recall": 0.933,
+    "f1": 0.9566,
+    "roc_auc": 0.997,
+    "threshold": 0.566,
+    "dataset": "clean",
+    "epochs": 50,
+    "parameters": 11177538,
+    "note": "очищенные данные"
+  },
+  "CNN": {
+    "name": "CNN",
+    "accuracy": 0.9222,
+    "precision": 0.7838,
+    "recall": 0.7497,
+    "f1": 0.7664,
+    "roc_auc": 0.9474,
+    "threshold": 0.5944,
+    "dataset": "clean",
+    "epochs": 50,
+    "parameters": 2172298,
+    "note": "очищенные данные"
+  },
+  "InceptionV1": {
+    "name": "InceptionV1",
+    "accuracy": 0.9838,
+    "precision": 0.9627403846153846,
+    "recall": 0.9412455934195064,
+    "f1": 0.9518716577540107,
+    "roc_auc": 0.9966014774559526,
+    "threshold": 0.11441799253225327,
+    "dataset": "clean",
+    "epochs": 50,
+    "parameters": 5982882,
+    "note": "очищенные данные"
+  }
+}
