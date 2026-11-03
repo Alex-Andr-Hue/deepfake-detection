@@ -1,4 +1,17 @@
 {
+  "ResNet18 (ImageNet)": {
+    "name": "ResNet18 (ImageNet)",
+    "accuracy": 0.9954,
+    "precision": 0.9882,
+    "recall": 0.9847,
+    "f1": 0.9865,
+    "roc_auc": 0.9996,
+    "threshold": 0.0046,
+    "dataset": "clean",
+    "epochs": 50,
+    "parameters": 11177538,
+    "note": "очищенные данные"
+  },
   "UNet": {
     "name": "UNet",
     "accuracy": 0.9892,
@@ -38,6 +51,45 @@
     "parameters": 11177538,
     "note": "очищенные данные"
   },
+  "InceptionV3": {
+    "name": "InceptionV3",
+    "accuracy": 0.9848,
+    "precision": 0.9564,
+    "recall": 0.9542,
+    "f1": 0.9553,
+    "roc_auc": 0.9969,
+    "threshold": 0.0425,
+    "dataset": "clean",
+    "epochs": 50,
+    "parameters": 20157922,
+    "note": "очищенные данные"
+  },
+  "InceptionV1": {
+    "name": "InceptionV1",
+    "accuracy": 0.9838,
+    "precision": 0.9627,
+    "recall": 0.9412,
+    "f1": 0.9519,
+    "roc_auc": 0.9966,
+    "threshold": 0.1144,
+    "dataset": "clean",
+    "epochs": 50,
+    "parameters": 5982882,
+    "note": "очищенные данные"
+  },
+  "InceptionV1+Freq": {
+    "name": "InceptionV1+Freq",
+    "accuracy": 0.9834,
+    "precision": 0.9528,
+    "recall": 0.9495,
+    "f1": 0.9511,
+    "roc_auc": 0.9961,
+    "threshold": 0.0239,
+    "dataset": "clean",
+    "epochs": 50,
+    "parameters": 5992290,
+    "note": "очищенные данные"
+  },
   "CNN": {
     "name": "CNN",
     "accuracy": 0.9222,
@@ -51,17 +103,30 @@
     "parameters": 2172298,
     "note": "очищенные данные"
   },
-  "InceptionV1": {
-    "name": "InceptionV1",
-    "accuracy": 0.9838,
-    "precision": 0.9627403846153846,
-    "recall": 0.9412455934195064,
-    "f1": 0.9518716577540107,
-    "roc_auc": 0.9966014774559526,
-    "threshold": 0.11441799253225327,
+  "InceptionV1 (шумные)": {
+    "name": "InceptionV1 (шумные)",
+    "accuracy": 0.9732,
+    "precision": 0.9345454545454546,
+    "recall": 0.9059929494712103,
+    "f1": 0.9200477326968973,
+    "roc_auc": 0.9911706953581895,
+    "threshold": 0.5499427318572998,
+    "dataset": "noisy",
+    "epochs": 50,
+    "parameters": 5982882,
+    "note": "без удаления шума"
+  },
+  "InceptionV1 (шум -> чистые)": {
+    "name": "InceptionV1 (шум -> чистые)",
+    "accuracy": 0.9868,
+    "precision": 0.976913730255164,
+    "recall": 0.9447708578143361,
+    "f1": 0.9605734767025089,
+    "roc_auc": 0.9967321844149156,
+    "threshold": 0.12326005101203918,
     "dataset": "clean",
     "epochs": 50,
     "parameters": 5982882,
-    "note": "очищенные данные"
+    "note": "двухстадийное обучение"
   }
 }
